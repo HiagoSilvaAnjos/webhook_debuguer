@@ -1,0 +1,12 @@
+{
+  "name": "webhook_debuguer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "api",
+    "web"
+  ],
+  "packageManager": "pnpm@10.17.1"
+}
