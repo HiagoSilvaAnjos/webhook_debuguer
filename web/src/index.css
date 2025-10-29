@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme inline {
-    --default-font-family: Geist, sans-serif;
+    --default-font-family: Mulish, sans-serif;
     --font-mono: JetBrains Mono;
+
 
     /* Custom zinc palette - subtle dark backgrounds with light text */
     --color-zinc-950: #0f0f11; /* Main background */
