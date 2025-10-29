@@ -10,6 +10,9 @@ import { fastifyCors } from "@fastify/cors";
 import ScalarApiReference from "@scalar/fastify-api-reference";
 import { listWebhooks } from "./routes/list-webhooks";
 import { env } from "./env";
+import { getWebhook } from "./routes/get-webhook";
+import { deleteWebhook } from "./routes/delete-webhook";
+import { captureWebhook } from "./routes/capture-webhook";
 
 // Cria uma instância do Fastify com suporte a tipagem usando Zod
 const app = fastify().withTypeProvider<ZodTypeProvider>();
@@ -48,6 +51,9 @@ app.register(ScalarApiReference, {
 // Registra as rotas da aplicação
 // Inclui a rota para listar webhooks
 app.register(listWebhooks);
+app.register(getWebhook);
+app.register(deleteWebhook);
+app.register(captureWebhook);
 
 // Inicia o servidor
 app.listen({ port: env.PORT, host: "0.0.0.0" }).then(() => {
